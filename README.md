@@ -138,6 +138,5 @@ $user->flushObservers();
 ### To-Do
 
 * Add dedicated methods to Observers to only receive relevant event types from Observables
-* Add support to remove observers
 * Instead of passing Strings as event types there should be dedicated objects for that
 * Remove example scripts and add requirements to composer.json
