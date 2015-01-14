@@ -2,14 +2,10 @@
 
 include 'vendor/autoload.php';
 
-$user = new User();
-$persistence = new Persistence();
 $mailer = new Mailer();
 
+$user = new User();
 
-$user->addObserver( $persistence );
 $user->addObserver( $mailer );
-$user->removeObserver( $persistence );
+$user->removeObserver( $mailer );
 $user->signUp();
-
-echo "Doing Something else";

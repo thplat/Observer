@@ -5,6 +5,7 @@ It currently supports queued observer notifications.
 ## Usage
 
 * [Adding Observers](#adding-observers)
+* [Removing Observers](#removing-observers)
 * [Notifying Observers](#notifying-observers)
 * [Handling Observables](#handling-observables)
 * [Queued Observer Notification](#queued-observer-notifications)
@@ -28,6 +29,24 @@ $mailer = new Mailer();
 
 $user->addObserver( $mailer );
 ```
+
+### Removing Observers
+
+Observers can be as easily removed as they can be added through a call to `removeObserver()`
+
+```php
+<?php
+
+$mailer = new Mailer();
+
+$user = new User();
+
+$user->addObserver( $mailer );
+$user->removeObserver( $mailer );
+$user->signUp();
+```
+
+
 
 ### Notifying Observers
 
