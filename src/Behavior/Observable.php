@@ -20,6 +20,26 @@ trait Observable {
 	}
 
 
+	/**
+	 * Removes an observer from the Observable
+	 *
+	 * @param Observer $observer
+	 */
+	
+	public function removeObserver( Observer $observerToRemove )
+	{
+		for( $i = 0; $i < count($this->observers); $i++ )
+		{
+			if( $this->observers[$i] === $observerToRemove )
+			{
+				unset($this->observers[$i]);
+			}
+
+			$this->observers = array_values($this->observers);
+		}
+	}
+
+
 	protected function queueObserverNotification( $type )
 	{
 		$this->observerQueue[] = $type;
@@ -34,7 +54,7 @@ trait Observable {
 	{
 		$this->callObservers($type);
 	}
-	
+
 
 	/**
 	 * Notifies observers in queue

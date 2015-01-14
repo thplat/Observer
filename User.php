@@ -8,8 +8,8 @@ class User implements Observable {
 
 	public function signUp()
 	{
-		echo "--- A user signed up ---";
-		$this->queueObserverNotification('User Signed Up');
+		echo "A user signed up";
+		$this->notifyObservers('User Signed Up');
 	}
 
 }
