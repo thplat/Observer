@@ -79,7 +79,7 @@ class Mailer implements Observer {
 ### Queued Observer Notifications
 
 Observers can be only notified from within an Observable. However instead of immediately notifying all Observers
-the notifications can be queued. They can then be flushed at a later point of script execution.
+the notifications can be queued. They can then be flushed at a later point of script execution from the outside environment.
 
 To register a queued notification the `queueObserverNotification` may be called on an Observable.
 
