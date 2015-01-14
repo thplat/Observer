@@ -1,0 +1,12 @@
+{
+	"description": "Observer",
+
+	"autoload": {
+
+		"classmap": [ "User.php", "Persistence.php" ],
+
+		"psr-4": {
+			"Observer\\": "src"
+		}
+	}
+}
