@@ -1,6 +1,6 @@
 # Observer
 An implementation of the Observer-Pattern in PHP which makes use of Traits.
-It currently supports queued observer notification.
+It currently supports queued observer notifications.
 
 ## Usage
 
