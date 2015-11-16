@@ -27,7 +27,7 @@ able to be registered to an Observable.
 $user = new User();
 $mailer = new Mailer();
 
-$user->addObserver( $mailer );
+$user->addObserver($mailer);
 ```
 
 ### Removing Observers
@@ -41,8 +41,8 @@ $mailer = new Mailer();
 
 $user = new User();
 
-$user->addObserver( $mailer );
-$user->removeObserver( $mailer );
+$user->addObserver($mailer);
+$user->removeObserver($mailer);
 $user->signUp();
 ```
 
@@ -87,7 +87,7 @@ use Observer\Interfaces\Observable;
 
 class Mailer implements Observer {
 
-	public function notifyObserver( Observable $user, $type )
+	public function notifyObserver(Observable $user, $type)
 	{
 		echo "E-Mail some welcome message to the user";
 	}
@@ -127,7 +127,7 @@ on the Observable.
 $user = new User();
 $mailer = new Mailer();
 
-$user->addObserver( $mailer );
+$user->addObserver($mailer);
 $user->signUp();
 
 echo "Doing Something else";
